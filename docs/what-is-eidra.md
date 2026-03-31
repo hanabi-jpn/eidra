@@ -4,6 +4,14 @@ Eidra is a local safety layer for AI tools.
 
 It sits between you and tools like Cursor, Claude Code, Codex CLI, OpenAI or Anthropic SDK-based apps, GitHub Actions, or MCP-connected workflows. Before data leaves your machine, Eidra can scan it, mask secrets, block unsafe requests, route sensitive requests to a local model, and show you what happened.
 
+## In plain language
+
+Eidra is the safety filter between your AI tool and the outside world.
+
+- if something sensitive is about to leave, Eidra can hide it
+- if something dangerous is about to run, Eidra can stop it
+- if something should stay local, Eidra can route it locally
+
 ## Why people need it
 
 Modern AI tools are useful because they see a lot.

@@ -35,6 +35,8 @@ Claude Code reads your `.env` without asking. Copilot repos leak secrets [40% mo
 
 No cloud. No account. Everything on your device.
 
+In plain language: Eidra is a safety filter that watches what your AI tools are trying to send or do, then helps you hide, stop, or reroute the risky parts.
+
 Works today with **Cursor**, **Claude Code**, **Codex CLI**, **OpenAI-compatible SDK apps**, **Anthropic-compatible SDK apps**, **GitHub Actions**, and **MCP toolchains**.
 If a tool can run behind standard `HTTP_PROXY` / `HTTPS_PROXY` settings, Eidra can usually sit in front of it.
 
@@ -55,11 +57,39 @@ eidra dashboard
 
 ## Choose Your Path
 
+- Want the simplest explanation? Read [For Everyone](docs/for-everyone.md)
 - New to AI tooling? Start with [What Is Eidra?](docs/what-is-eidra.md)
+- Want concrete before-and-after examples? Read [Use Cases](docs/use-cases.md)
 - Building with editors, SDKs, or MCP? Read [For Developers](docs/for-developers.md)
 - Want the system view? Read [Architecture](docs/architecture.md)
 - Writing about Eidra? Use the [Media Kit](docs/media-kit.md)
 - Planning launch and outreach? Use the [Marketing Strategy](docs/marketing-strategy.md), [Messaging House](docs/messaging-house.md), [Outreach Playbook](docs/outreach.md), [Social Content Pack](docs/social-content.md), [Launch Checklist](docs/launch-checklist.md), and the [GitHub Launch Kit](docs/launch/github-launch-kit.md)
+
+---
+
+## See It In 30 Seconds
+
+### 1. A coding agent tries to send `.env`
+
+```text
+Without Eidra: prompt + .env contents -> cloud API
+With Eidra:    prompt + [REDACTED:api_key:a3f2] -> cloud API
+```
+
+### 2. An MCP tool call turns destructive
+
+```text
+execute_sql("DROP TABLE users") -> blocked by MCP policy
+run_command("rm -rf /")         -> blocked by MCP policy
+```
+
+### 3. A request is too sensitive for cloud
+
+```text
+PII or internal code detected -> routed to local Ollama model
+```
+
+If you want the longer version with concrete workflows, read [Use Cases](docs/use-cases.md).
 
 ---
 
