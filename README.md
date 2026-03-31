@@ -55,6 +55,42 @@ eidra dashboard
 
 ---
 
+## Start Here
+
+| If you want to... | Run this | What you get |
+|---|---|---|
+| Protect **Cursor**, **Claude Code**, or **Codex CLI** | `eidra init && eidra setup codex && eidra dashboard` | A live proxy + dashboard you can put in front of your coding tool today |
+| Check whether Eidra is ready on your machine | `eidra doctor --json` | CA, config, policy, local routing, and MCP readiness in one place |
+| Put guardrails in front of **MCP tools** | `eidra gateway` | A local MCP firewall with server allowlists and tool rules |
+| Start with the lowest-friction proof | `eidra scan --json path/to/file` | Real findings without touching your editor or proxy settings |
+
+### Try It The Way You Prefer
+
+```bash
+# Fastest install path
+curl -sf eidra.dev/install | sh
+
+# Install from source
+cargo install --path crates/eidra-core
+
+# Run directly from a local clone
+cargo run -p eidra-core -- dashboard
+```
+
+### What Works Today
+
+Eidra is early, but it is already useful for real workflows:
+
+- **Traffic visibility** — you can see requests, findings, and decisions in a live TUI
+- **Secret protection** — you can scan, mask, or block secrets before they leave your machine
+- **Local routing** — sensitive OpenAI-compatible chat traffic can be routed to Ollama
+- **MCP policy** — you can allowlist servers, restrict tools, and scan tool responses
+- **Automation** — `doctor --json`, `scan --json`, and `config validate --json` work in CI and scripts
+
+If you only try one thing today, start with `eidra doctor`, then `eidra setup cursor`, `eidra setup claude-code`, or `eidra setup codex` depending on what you use.
+
+---
+
 ## Choose Your Path
 
 - Want the simplest explanation? Read [For Everyone](docs/for-everyone.md)

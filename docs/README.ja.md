@@ -50,6 +50,42 @@ eidra dashboard
 
 ---
 
+## 最初にここから
+
+| やりたいこと | まず打つコマンド | 何が分かるか / できるか |
+|---|---|---|
+| **Cursor / Claude Code / Codex** を守りたい | `eidra init && eidra setup codex && eidra dashboard` | すぐ前段に置けるローカル proxy と live dashboard |
+| 自分の環境で本当に使えるか確認したい | `eidra doctor --json` | CA、config、policy、local routing、MCP の readiness を一気に確認 |
+| **MCP tools** の前にガードレールを置きたい | `eidra gateway` | server allowlist と tool rule を持つローカル MCP firewall |
+| いちばん手軽に試したい | `eidra scan --json path/to/file` | editor や proxy 設定を触らずに real findings を確認 |
+
+### 好きな始め方で試せます
+
+```bash
+# いちばん速い導線
+curl -sf eidra.dev/install | sh
+
+# ソースから install
+cargo install --path crates/eidra-core
+
+# clone 済みならそのまま実行
+cargo run -p eidra-core -- dashboard
+```
+
+### 今すぐ使えること
+
+Eidra はまだ early ですが、もう実運用に近い試し方ができます。
+
+- **可視化**: live TUI で request / finding / decision を見られる
+- **secret 保護**: 端末の外へ出る前に scan / mask / block できる
+- **local routing**: 機密性の高い OpenAI 互換 chat を Ollama に逃がせる
+- **MCP policy**: server allowlist、tool 制御、response scan を使える
+- **自動化**: `doctor --json`、`scan --json`、`config validate --json` を CI や script で扱える
+
+もし今日 1 つだけ試すなら、まず `eidra doctor` を実行して、そのあと `eidra setup cursor`、`eidra setup claude-code`、`eidra setup codex` のどれかに進むのがおすすめです。
+
+---
+
 ## 読み方ガイド
 
 - いちばんやさしい説明から入りたいなら [はじめての Eidra](for-everyone.ja.md)
