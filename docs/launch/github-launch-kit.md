@@ -205,9 +205,11 @@ Thanks for taking a look.
 Use this as the main public post.
 
 ```text
-Open-sourcing Eidra: a local-first safety filter for AI development.
+Your AI coding stack has no outbound firewall.
 
-Put it in front of Cursor, Claude Code, Codex, SDK workflows, or MCP tools to see what leaves your machine and mask, block, or route sensitive traffic.
+I open-sourced Eidra: a local safety filter for Cursor, Claude Code, Codex, SDK apps, and MCP tools.
+
+See what leaves your machine. Mask or block secrets. Route sensitive requests locally.
 
 https://github.com/<your-org-or-user>/eidra
 ```
@@ -215,15 +217,16 @@ https://github.com/<your-org-or-user>/eidra
 ## 12. Launch-Day Japanese Post
 
 ```text
-AIツールは便利ですが、見えないまま送りすぎることがあります。
+Cursor / Claude Code / Codex の前に置く、安全フィルター OSS を公開しました。
 
-その前段に置く安全フィルターとして Eidra を OSS で公開しました。
+Eidra は
+- 外に出る通信を見える化
+- secret を mask / block
+- 機密リクエストを local model に route
 
-Cursor、Claude Code、Codex、SDK、MCP の前で通信を見て、危ない部分を mask / block / route できます。
+できるツールです。
 
-Cursor、Claude Code、Codex、SDK、MCP まわりを触っている方がいたら、率直なフィードバックをいただけると嬉しいです。
-
-GitHub: https://github.com/<your-org-or-user>/eidra
+https://github.com/<your-org-or-user>/eidra
 ```
 
 ## 13. Launch-Day LinkedIn Post

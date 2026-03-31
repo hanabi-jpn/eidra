@@ -63,9 +63,8 @@ The ideal first payload is:
 ### For developers and builders
 
 ```text
-I am building Eidra, an open-source local safety filter for AI development.
-It sits in front of tools like Cursor, Claude Code, Codex, and MCP workflows, scans what is about to leave your machine, and can mask, block, or route sensitive requests locally.
-If you are open to it, I would love 10 minutes of honest feedback and just one thing that feels confusing or high-friction.
+Built an OSS called Eidra. It is a local safety filter for Cursor, Claude Code, Codex, SDK workflows, and MCP tools: you can see what leaves your machine and mask, block, or route risky traffic before it goes out.
+If you are open to it, I would love 10 minutes of honest feedback and one blunt thing that feels confusing or high-friction.
 ```
 
 ### For creators and newsletters
@@ -89,9 +88,9 @@ If you have 10 minutes, I would really value one blunt reaction on whether the m
 ### For developers and builders
 
 ```text
-AI開発環境の見えないデータ流出を、ローカルで可視化・制御する安全フィルターとして Eidra を作っています。
-Cursor、Claude Code、Codex、MCP まわりの通信を scan して、mask / block / route できる local-first OSS です。
-もしよかったら10分だけ触ってみて、分かりづらい点を1つだけ率直に教えてもらえると嬉しいです。
+AIコーディングツール向けの安全フィルター OSS「Eidra」を作っています。
+Cursor / Claude Code / Codex / MCP の通信を見える化して、必要なら mask / block / route できます。
+もしよかったら10分だけ触ってみて、率直な違和感を1つだけ教えてもらえると嬉しいです。
 ```
 
 ### For creators and newsletters

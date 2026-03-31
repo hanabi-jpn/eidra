@@ -486,14 +486,14 @@ fn render_discussion_announcement() -> String {
 
 fn render_x_post(repo_url: &str) -> String {
     format!(
-        "Open-sourcing Eidra: a local-first safety filter for AI development.\n\nPut it in front of Cursor, Claude Code, Codex, SDK workflows, or MCP tools to see what leaves your machine and mask, block, or route sensitive traffic.\n\n{}",
+        "Your AI coding stack has no outbound firewall.\n\nI open-sourced Eidra: a local safety filter for Cursor, Claude Code, Codex, SDK apps, and MCP tools.\n\nSee what leaves your machine. Mask or block secrets. Route sensitive requests locally.\n\n{}",
         repo_url
     )
 }
 
 fn render_x_post_ja(repo_url: &str) -> String {
     format!(
-        "AIツールは便利ですが、見えないまま送りすぎることがあります。\n\nその前段に置く安全フィルターとして Eidra を OSS で公開しました。\n\nCursor、Claude Code、Codex、SDK、MCP の前で通信を見て、危ない部分を mask / block / route できます。\n\nCursor、Claude Code、Codex、SDK、MCP を触っている方がいたら、率直なフィードバックをいただけると嬉しいです。\n\nGitHub: {}",
+        "Cursor / Claude Code / Codex の前に置く、安全フィルター OSS を公開しました。\n\nEidra は\n- 外に出る通信を見える化\n- secret を mask / block\n- 機密リクエストを local model に route\n\nできるツールです。\n\n{}",
         repo_url
     )
 }
@@ -504,14 +504,14 @@ fn render_linkedin_post() -> String {
 
 fn render_warm_dm_en(repo_url: &str) -> String {
     format!(
-        "I’ve been building Eidra, a local-first safety filter for AI development. You can put it in front of Cursor, Claude Code, Codex, SDK workflows, or MCP tools to see what is about to leave your machine and hide, stop, or route risky traffic before it does. If you have 10 minutes, I’d love one honest reaction on what feels clear or confusing. GitHub: {}",
+        "Built an OSS called Eidra. It is a local safety filter for Cursor, Claude Code, Codex, SDK workflows, and MCP tools: you can see what leaves your machine and mask, block, or route risky traffic before it goes out. If you have 10 minutes, I would love one blunt reaction. GitHub: {}",
         repo_url
     )
 }
 
 fn render_warm_dm_ja(repo_url: &str) -> String {
     format!(
-        "AI開発環境の前段に置く安全フィルターとして Eidra を作っています。Cursor、Claude Code、Codex、SDK、MCP の通信をローカルで見て、必要なら mask / block / route できる OSS です。もし 10 分だけ見てもらえたら、分かりやすい点と分かりにくい点を 1 つずつもらえるとすごく嬉しいです。GitHub: {}",
+        "AIコーディングツール向けの安全フィルター OSS「Eidra」を作っています。Cursor / Claude Code / Codex / MCP の通信を見える化して、必要なら mask / block / route できます。10分だけ見てもらって、率直な違和感を1つもらえると嬉しいです。GitHub: {}",
         repo_url
     )
 }
