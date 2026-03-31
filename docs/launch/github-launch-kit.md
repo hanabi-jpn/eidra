@@ -26,15 +26,15 @@ Use one of these in the GitHub repository About box.
 
 ### Option A
 
-`Local-first trust layer for AI development. Scan, control, and explain AI traffic before it leaves your machine.`
+`Local-first safety filter for AI development. See what your AI tools send, then hide, stop, or route risky traffic before it leaves your machine.`
 
 ### Option B
 
-`Open-source local proxy and MCP firewall for AI development workflows.`
+`Open-source local proxy and MCP firewall for safer AI development workflows.`
 
 ### Option C
 
-`A localhost trust boundary for AI tools, MCP workflows, and agentic development.`
+`A localhost safety filter for AI tools, MCP workflows, and agentic development.`
 
 ## 2. Repository Website
 
@@ -85,6 +85,8 @@ Do not overload the image with too much text.
 Before public launch, make sure these are easy to find from the repo root:
 
 - `README.md`
+- `docs/for-everyone.md`
+- `docs/use-cases.md`
 - `docs/what-is-eidra.md`
 - `docs/for-developers.md`
 - `docs/architecture.md`
@@ -108,13 +110,14 @@ Use this as the first GitHub release body.
 ```md
 ## Eidra v0.1.0
 
-Eidra is an open-source local-first trust layer for AI development.
+Eidra is an open-source local-first safety filter for AI development.
 
 It helps you:
 
 - see what leaves your machine
-- decide what is allowed to leave
-- prove what happened later
+- hide or stop risky data before it leaves
+- route sensitive requests locally when needed
+- understand what happened later
 
 This release packages the current core workflow into a repo that people can try, review, and build on.
 
@@ -125,20 +128,21 @@ This release packages the current core workflow into a repo that people can try,
 - MCP gateway controls
 - live terminal dashboard
 - `eidra doctor` for environment checks
-- `eidra setup` guidance for common environments
+- `eidra setup` guidance for Cursor, Claude Code, Codex, SDKs, CI, and MCP
 - machine-readable scan output
 - local routing for supported OpenAI-compatible chat requests
+- beginner-friendly onboarding docs and concrete use cases
 
 ### Good first ways to try Eidra
 
-1. Run `eidra doctor`
-2. Run `eidra scan`
-3. Start the dashboard and inspect a small workflow
-4. Try setup guidance for your editor, SDK, or CI path
+1. Read `docs/for-everyone.md`
+2. Run `eidra doctor`
+3. Run `eidra setup codex` or swap in your tool of choice
+4. Start the dashboard and inspect a small workflow
 
 ### Who this is for
 
-- developers using AI coding tools
+- developers using Cursor, Claude Code, Codex, or SDK workflows
 - builders working with MCP workflows
 - teams that want a local trust boundary before heavier governance tooling
 
@@ -154,7 +158,7 @@ The product direction is clear, but some integrations and advanced routing paths
 Use this shorter version when you want a compact public summary.
 
 ```text
-Eidra is an open-source local-first trust layer for AI development. It puts a local proxy and MCP firewall in front of AI workflows so you can inspect traffic, apply policy, and understand what happened later.
+Eidra is an open-source local-first safety filter for AI development. Put it in front of Cursor, Claude Code, Codex, SDK workflows, or MCP tools to inspect, mask, block, or route sensitive traffic.
 ```
 
 ## 9. Release CTA
@@ -176,10 +180,12 @@ If Discussions are enabled, use this as the first pinned announcement.
 ```md
 # Welcome to Eidra
 
-Eidra is a local-first trust layer for AI development.
+Eidra is a local-first safety filter for AI development.
 
 If you are here for the first time, the best starting points are:
 
+- [For Everyone](../for-everyone.md)
+- [Use Cases](../use-cases.md)
 - [What Is Eidra?](../what-is-eidra.md)
 - [For Developers](../for-developers.md)
 - [Architecture](../architecture.md)
@@ -187,7 +193,8 @@ If you are here for the first time, the best starting points are:
 If you try Eidra, the most useful feedback is:
 
 - where setup felt unclear
-- what workflow you wanted to protect
+- what workflow you wanted to protect first
+- what felt useful right away
 - what feature or integration felt missing
 
 Thanks for taking a look.
@@ -198,24 +205,21 @@ Thanks for taking a look.
 Use this as the main public post.
 
 ```text
-AI development needs a localhost trust boundary.
+Open-sourcing Eidra: a local-first safety filter for AI development.
 
-I’m open-sourcing Eidra: a local-first trust layer for AI development.
+Put it in front of Cursor, Claude Code, Codex, SDK workflows, or MCP tools to see what leaves your machine and mask, block, or route sensitive traffic.
 
-It sits in front of AI tools and MCP workflows, lets you inspect what is about to leave your machine, and can apply local policy to allow, mask, block, or route traffic.
-
-If you use Cursor, Claude Code, Codex, SDK workflows, or MCP tools, I’d love honest feedback.
-
-GitHub: https://github.com/<your-org-or-user>/eidra
+https://github.com/<your-org-or-user>/eidra
 ```
 
 ## 12. Launch-Day Japanese Post
 
 ```text
-AI開発環境に、localhost の信頼境界を置きたくて Eidra をオープンソースで公開します。
+AIツールは便利ですが、見えないまま送りすぎることがあります。
 
-Eidra は、AIツールや MCP ワークフローの前段に置く local-first trust layer です。
-外に出る前の通信を見て、ローカルの policy で allow / mask / block / route できます。
+その前段に置く安全フィルターとして Eidra を OSS で公開しました。
+
+Cursor、Claude Code、Codex、SDK、MCP の前で通信を見て、危ない部分を mask / block / route できます。
 
 Cursor、Claude Code、Codex、SDK、MCP まわりを触っている方がいたら、率直なフィードバックをいただけると嬉しいです。
 
@@ -227,9 +231,9 @@ GitHub: https://github.com/<your-org-or-user>/eidra
 ```text
 Modern AI development is no longer just chat.
 
-It now spans editors, coding agents, SDK workflows, MCP tools, and automation. That means developers need a clearer trust boundary around what leaves the machine.
+It now spans Cursor, Claude Code, Codex, SDK workflows, MCP tools, and automation. That means developers need a clearer safety boundary around what leaves the machine.
 
-I’m open-sourcing Eidra as a local-first trust layer for that boundary. It combines a local proxy, policy-based traffic control, an MCP firewall, and a live dashboard for understanding AI workflow behavior.
+I’m open-sourcing Eidra as a local-first safety filter for that boundary. It combines a local proxy, policy-based traffic control, an MCP firewall, and a live dashboard so teams can see, hide, stop, or route risky AI traffic before it leaves.
 
 If you work on AI developer tools, agent workflows, or security-adjacent infrastructure, I would love your feedback.
 ```

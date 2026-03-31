@@ -9,14 +9,14 @@ use crate::runtime::runtime_paths;
 
 const DEFAULT_REPO_URL: &str = "https://github.com/<your-org-or-user>/eidra";
 const ABOUT_OPTION_A: &str =
-    "Local-first trust layer for AI development. Scan, control, and explain AI traffic before it leaves your machine.";
+    "Local-first safety filter for AI development. See what your AI tools send, then hide, stop, or route risky traffic before it leaves your machine.";
 const ABOUT_OPTION_B: &str =
-    "Open-source local proxy and MCP firewall for AI development workflows.";
+    "Open-source local proxy and MCP firewall for safer AI development workflows.";
 const ABOUT_OPTION_C: &str =
-    "A localhost trust boundary for AI tools, MCP workflows, and agentic development.";
-const RELEASE_SUMMARY: &str = "Eidra is an open-source local-first trust layer for AI development. It puts a local proxy and MCP firewall in front of AI workflows so you can inspect traffic, apply policy, and understand what happened later.";
+    "A localhost safety filter for AI tools, MCP workflows, and agentic development.";
+const RELEASE_SUMMARY: &str = "Eidra is an open-source local-first safety filter for AI development. Put it in front of Cursor, Claude Code, Codex, SDK workflows, or MCP tools to inspect, mask, block, or route sensitive traffic.";
 const FEEDBACK_CTA: &str =
-    "If you use Cursor, Claude Code, SDK workflows, or MCP tools, I would love one honest reaction on what feels clear or confusing.";
+    "If you use Cursor, Claude Code, Codex, SDK workflows, or MCP tools, I would love one honest reaction on what feels clear or confusing.";
 const BUILDER_CTA: &str =
     "If you are building with MCP or agent workflows, I would especially love feedback on integration paths and policy ergonomics.";
 const TOPICS: &[&str] = &[
@@ -476,42 +476,42 @@ fn render_social_preview_brief(brief: &SocialPreviewBrief) -> String {
 
 fn render_release_notes(tag: &str) -> String {
     format!(
-        "## Eidra {tag}\n\nEidra is an open-source local-first trust layer for AI development.\n\nIt helps you:\n\n- see what leaves your machine\n- decide what is allowed to leave\n- prove what happened later\n\nThis release packages the current core workflow into a repo that people can try, review, and build on.\n\n### What is in this release\n\n- local proxy for AI traffic inspection\n- policy-based allow / mask / block / route decisions\n- MCP gateway controls\n- live terminal dashboard\n- `eidra doctor` for environment checks\n- `eidra setup` guidance for common environments\n- machine-readable scan output\n- local routing for supported OpenAI-compatible chat requests\n- `eidra launch github` automation for GitHub launch assets and `gh` scripts\n\n### Good first ways to try Eidra\n\n1. Run `eidra doctor`\n2. Run `eidra scan`\n3. Start the dashboard and inspect a small workflow\n4. Try setup guidance for your editor, SDK, or CI path\n5. Generate a GitHub launch kit with `eidra launch github --write`\n\n### Who this is for\n\n- developers using AI coding tools\n- builders working with MCP workflows\n- teams that want a local trust boundary before heavier governance tooling\n\n### What to expect\n\nThis is an early but usable open-source release.\n\nThe product direction is clear, but some integrations and advanced routing paths are still evolving. Feedback on setup friction, policy ergonomics, and integration priorities is especially helpful.\n"
+        "## Eidra {tag}\n\nEidra is an open-source local-first safety filter for AI development.\n\nIt helps you:\n\n- see what leaves your machine\n- hide or stop risky data before it leaves\n- route sensitive requests locally when needed\n- understand what happened later\n\nThis release packages the current core workflow into a repo that people can try, review, and build on.\n\n### What is in this release\n\n- local proxy for AI traffic inspection\n- policy-based allow / mask / block / route decisions\n- MCP gateway controls\n- live terminal dashboard\n- `eidra doctor` for environment checks\n- `eidra setup` guidance for Cursor, Claude Code, Codex, SDKs, CI, and MCP\n- machine-readable scan output\n- local routing for supported OpenAI-compatible chat requests\n- beginner-friendly onboarding docs and concrete use cases\n- `eidra launch github` automation for GitHub launch assets and `gh` scripts\n\n### Good first ways to try Eidra\n\n1. Read `docs/for-everyone.md`\n2. Run `eidra doctor`\n3. Run `eidra setup codex` or swap in your tool of choice\n4. Start the dashboard and inspect a small workflow\n5. Generate a GitHub launch kit with `eidra launch github --write`\n\n### Who this is for\n\n- developers using Cursor, Claude Code, Codex, or SDK workflows\n- builders working with MCP workflows\n- teams that want a local trust boundary before heavier governance tooling\n\n### What to expect\n\nThis is an early but usable open-source release.\n\nThe product direction is clear, but some integrations and advanced routing paths are still evolving. Feedback on setup friction, policy ergonomics, and integration priorities is especially helpful.\n"
     )
 }
 
 fn render_discussion_announcement() -> String {
-    "# Welcome to Eidra\n\nEidra is a local-first trust layer for AI development.\n\nIf you are here for the first time, the best starting points are:\n\n- [What Is Eidra?](../what-is-eidra.md)\n- [For Developers](../for-developers.md)\n- [Architecture](../architecture.md)\n\nIf you try Eidra, the most useful feedback is:\n\n- where setup felt unclear\n- what workflow you wanted to protect\n- what feature or integration felt missing\n\nThanks for taking a look.\n".to_string()
+    "# Welcome to Eidra\n\nEidra is a local-first safety filter for AI development.\n\nIf you are here for the first time, the best starting points are:\n\n- [For Everyone](../for-everyone.md)\n- [Use Cases](../use-cases.md)\n- [For Developers](../for-developers.md)\n- [Architecture](../architecture.md)\n\nIf you try Eidra, the most useful feedback is:\n\n- where setup felt unclear\n- what workflow you wanted to protect first\n- what felt useful right away\n- what feature or integration felt missing\n\nThanks for taking a look.\n".to_string()
 }
 
 fn render_x_post(repo_url: &str) -> String {
     format!(
-        "AI development needs a localhost trust boundary.\n\nI’m open-sourcing Eidra: a local-first trust layer for AI development.\n\nIt sits in front of AI tools and MCP workflows, lets you inspect what is about to leave your machine, and can apply local policy to allow, mask, block, or route traffic.\n\n{}\n\nGitHub: {}",
-        FEEDBACK_CTA, repo_url
+        "Open-sourcing Eidra: a local-first safety filter for AI development.\n\nPut it in front of Cursor, Claude Code, Codex, SDK workflows, or MCP tools to see what leaves your machine and mask, block, or route sensitive traffic.\n\n{}",
+        repo_url
     )
 }
 
 fn render_x_post_ja(repo_url: &str) -> String {
     format!(
-        "AI開発環境に、localhost の信頼境界を置きたくて Eidra をオープンソースで公開します。\n\nEidra は、AIツールや MCP ワークフローの前段に置く local-first trust layer です。\n外に出る前の通信を見て、ローカルの policy で allow / mask / block / route できます。\n\nCursor、Claude Code、SDK、MCP まわりを触っている方がいたら、率直なフィードバックをいただけると嬉しいです。\n\nGitHub: {}",
+        "AIツールは便利ですが、見えないまま送りすぎることがあります。\n\nその前段に置く安全フィルターとして Eidra を OSS で公開しました。\n\nCursor、Claude Code、Codex、SDK、MCP の前で通信を見て、危ない部分を mask / block / route できます。\n\nCursor、Claude Code、Codex、SDK、MCP を触っている方がいたら、率直なフィードバックをいただけると嬉しいです。\n\nGitHub: {}",
         repo_url
     )
 }
 
 fn render_linkedin_post() -> String {
-    "Modern AI development is no longer just chat.\n\nIt now spans editors, coding agents, SDK workflows, MCP tools, and automation. That means developers need a clearer trust boundary around what leaves the machine.\n\nI’m open-sourcing Eidra as a local-first trust layer for that boundary. It combines a local proxy, policy-based traffic control, an MCP firewall, and a live dashboard for understanding AI workflow behavior.\n\nIf you work on AI developer tools, agent workflows, or security-adjacent infrastructure, I would love your feedback.".to_string()
+    "Modern AI development is no longer just chat.\n\nIt now spans Cursor, Claude Code, Codex, SDK workflows, MCP tools, and automation. That means developers need a clearer safety boundary around what leaves the machine.\n\nI’m open-sourcing Eidra as a local-first safety filter for that boundary. It combines a local proxy, policy-based traffic control, an MCP firewall, and a live dashboard so teams can see, hide, stop, or route risky AI traffic before it leaves.\n\nIf you work on AI developer tools, agent workflows, or security-adjacent infrastructure, I would love your feedback.".to_string()
 }
 
 fn render_warm_dm_en(repo_url: &str) -> String {
     format!(
-        "I’ve been building Eidra, a local-first trust layer for AI development. It sits in front of AI tools and MCP workflows so you can see what is about to leave your machine and apply local policy before it does. If you have 10 minutes, I’d love one honest reaction on what feels clear or confusing. GitHub: {}",
+        "I’ve been building Eidra, a local-first safety filter for AI development. You can put it in front of Cursor, Claude Code, Codex, SDK workflows, or MCP tools to see what is about to leave your machine and hide, stop, or route risky traffic before it does. If you have 10 minutes, I’d love one honest reaction on what feels clear or confusing. GitHub: {}",
         repo_url
     )
 }
 
 fn render_warm_dm_ja(repo_url: &str) -> String {
     format!(
-        "AI開発環境の前段に置く local-first trust layer として Eidra を作っています。AIツールや MCP の通信をローカルで見て、必要なら mask / block / route できる OSS です。もし 10 分だけ見てもらえたら、分かりやすい点と分かりにくい点を 1 つずつもらえるとすごく嬉しいです。GitHub: {}",
+        "AI開発環境の前段に置く安全フィルターとして Eidra を作っています。Cursor、Claude Code、Codex、SDK、MCP の通信をローカルで見て、必要なら mask / block / route できる OSS です。もし 10 分だけ見てもらえたら、分かりやすい点と分かりにくい点を 1 つずつもらえるとすごく嬉しいです。GitHub: {}",
         repo_url
     )
 }
@@ -700,9 +700,11 @@ fn render_apply_script(plan: &LaunchPlan, base_dir: &Path) -> String {
     )
 }
 
-fn required_assets() -> [(&'static str, &'static str); 10] {
+fn required_assets() -> [(&'static str, &'static str); 12] {
     [
         ("README", "README.md"),
+        ("For Everyone", "docs/for-everyone.md"),
+        ("Use Cases", "docs/use-cases.md"),
         ("What Is Eidra", "docs/what-is-eidra.md"),
         ("For Developers", "docs/for-developers.md"),
         ("Architecture", "docs/architecture.md"),
