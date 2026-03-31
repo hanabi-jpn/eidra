@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="docs/hero-banner.png" alt="Eidra hero banner">
+</p>
+
+<p align="center">
   <h1 align="center">Eidra</h1>
   <p align="center"><strong>See exactly what your AI tools are leaking. Then stop it.</strong></p>
   <p align="center">
