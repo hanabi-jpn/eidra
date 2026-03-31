@@ -31,6 +31,8 @@ Claude Code kann Ihre `.env` lesen, ohne zu fragen. Repositories mit Copilot lea
 
 Keine Cloud. Kein Konto. Alles bleibt auf Ihrem Gerät.
 
+Einfach gesagt: Eidra ist ein Sicherheitsfilter für KI-Tools. Es beobachtet, was hinausgehen oder ausgeführt werden soll, und hilft dabei, riskante Teile zu verbergen, zu stoppen oder lokal zu halten.
+
 <p align="center">
   <img src="demo.gif" alt="Eidra TUI Dashboard" width="800">
 </p>
@@ -39,9 +41,17 @@ Keine Cloud. Kein Konto. Alles bleibt auf Ihrem Gerät.
 curl -sf eidra.dev/install | sh
 eidra init
 eidra doctor --json
-eidra setup shell --write
+eidra setup codex --write
 eidra dashboard
 ```
+
+---
+
+## Lesehilfe
+
+- Für die einfachste Erklärung: [For Everyone](for-everyone.md)
+- Für konkrete Beispiele: [Use Cases](use-cases.md)
+- Für die neuesten technischen Details: [englisches README](../README.md) und [For Developers](for-developers.md)
 
 ---
 

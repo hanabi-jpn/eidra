@@ -30,6 +30,8 @@
 
 لا سحابة. لا حساب. كل شيء على جهازك.
 
+بصياغة أبسط: Eidra هو مرشح أمان يراقب ما تحاول أدوات الذكاء الاصطناعي إرساله أو تنفيذه، ثم يساعدك على إخفاء الأجزاء الخطرة أو إيقافها أو إبقائها محلية.
+
 <p align="center">
   <img src="demo.gif" alt="لوحة TUI لـ Eidra" width="800">
 </p>
@@ -37,8 +39,18 @@
 ```bash
 curl -sf eidra.dev/install | sh
 eidra init
+eidra doctor --json
+eidra setup codex --write
 eidra dashboard
 ```
+
+---
+
+## دليل القراءة
+
+- إذا أردت أبسط شرح، اقرأ [For Everyone](for-everyone.md)
+- إذا أردت أمثلة عملية، اقرأ [Use Cases](use-cases.md)
+- إذا أردت التفاصيل التقنية الأحدث، اقرأ [README الإنجليزي](../README.md) و [For Developers](for-developers.md)
 
 ---
 

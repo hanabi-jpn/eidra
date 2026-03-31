@@ -31,6 +31,8 @@ Claude Code peut lire votre `.env` sans vous demander. Les dépôts utilisant Co
 
 Pas de cloud. Pas de compte. Tout reste sur votre appareil.
 
+En version simple : Eidra est un filtre de sécurité pour les outils d'IA. Il regarde ce que vos outils s'apprêtent à envoyer ou à faire, puis vous aide à masquer, bloquer ou garder en local les parties risquées.
+
 <p align="center">
   <img src="demo.gif" alt="Eidra TUI Dashboard" width="800">
 </p>
@@ -39,9 +41,17 @@ Pas de cloud. Pas de compte. Tout reste sur votre appareil.
 curl -sf eidra.dev/install | sh
 eidra init
 eidra doctor --json
-eidra setup shell --write
+eidra setup codex --write
 eidra dashboard
 ```
+
+---
+
+## Guide de lecture
+
+- Pour l'explication la plus simple : [For Everyone](for-everyone.md)
+- Pour des exemples concrets : [Use Cases](use-cases.md)
+- Pour les détails techniques les plus récents : [README anglais](../README.md) et [For Developers](for-developers.md)
 
 ---
 

@@ -31,6 +31,8 @@ Claude Code बिना पूछे आपका `.env` पढ़ सकता
 
 कोई cloud नहीं। कोई account नहीं। सब कुछ आपके device पर।
 
+सीधी भाषा में: Eidra AI टूल्स के लिए एक safety filter है। यह देखता है कि आपके टूल्स क्या भेजने या चलाने वाले हैं, फिर risky हिस्सों को छिपाने, रोकने या local रखने में मदद करता है।
+
 <p align="center">
   <img src="demo.gif" alt="Eidra TUI Dashboard" width="800">
 </p>
@@ -39,9 +41,17 @@ Claude Code बिना पूछे आपका `.env` पढ़ सकता
 curl -sf eidra.dev/install | sh
 eidra init
 eidra doctor --json
-eidra setup shell --write
+eidra setup codex --write
 eidra dashboard
 ```
+
+---
+
+## पढ़ने की गाइड
+
+- सबसे आसान समझ के लिए: [For Everyone](for-everyone.md)
+- ठोस उदाहरणों के लिए: [Use Cases](use-cases.md)
+- सबसे नई तकनीकी जानकारी के लिए: [अंग्रेज़ी README](../README.md) और [For Developers](for-developers.md)
 
 ---
 
