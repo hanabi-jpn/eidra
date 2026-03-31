@@ -31,6 +31,9 @@ Claude Code reads your `.env` without asking. Copilot repos leak secrets [40% mo
 
 No cloud. No account. Everything on your device.
 
+Works today with **Cursor**, **Claude Code**, **Codex CLI**, **OpenAI-compatible SDK apps**, **Anthropic-compatible SDK apps**, **GitHub Actions**, and **MCP toolchains**.
+If a tool can run behind standard `HTTP_PROXY` / `HTTPS_PROXY` settings, Eidra can usually sit in front of it.
+
 <p align="center">
   <img src="docs/demo.gif" alt="Eidra TUI Dashboard" width="800">
 </p>
@@ -39,7 +42,7 @@ No cloud. No account. Everything on your device.
 curl -sf eidra.dev/install | sh
 eidra init
 eidra doctor --json
-eidra setup shell --write
+eidra setup codex --write
 eidra launch github --write
 eidra dashboard
 ```
@@ -58,7 +61,7 @@ eidra dashboard
 
 ## The Problem
 
-Every time you use Cursor, Claude Code, Copilot, or any AI coding tool:
+Every time you use Cursor, Claude Code, Codex, Copilot, or any AI coding tool:
 
 1. Your **entire file context** — including `.env` files, API keys, database credentials — gets sent to cloud APIs
 2. Your **MCP tools** can access files, databases, and services with no access control
@@ -124,8 +127,8 @@ eidra doctor
 eidra doctor --json
 
 # Print setup steps for your environment
-eidra setup cursor
-eidra setup cursor --write
+eidra setup codex
+eidra setup codex --write
 
 # Generate GitHub launch assets and gh scripts
 eidra launch github --write
@@ -226,6 +229,7 @@ Use `eidra setup <target>` to print copy-pasteable integration steps for common 
 eidra setup shell
 eidra setup cursor
 eidra setup claude-code
+eidra setup codex
 eidra setup openai-sdk
 eidra setup anthropic-sdk
 eidra setup github-actions
@@ -234,6 +238,7 @@ eidra setup mcp
 
 Use `eidra setup <target> --write` to generate reusable artifacts under `~/.eidra/generated/<target>/` instead of editing your shell or IDE files directly.
 
+Named setup targets exist today for Cursor, Claude Code, Codex CLI, OpenAI-compatible SDKs, Anthropic-compatible SDKs, GitHub Actions, and MCP toolchains.
 This keeps the default install path simple while making Eidra easier to drop into real-world local, SDK, CI, and MCP workflows.
 
 ---

@@ -101,7 +101,7 @@ Use the [Media Kit](media-kit.md)
 
 ## 30-Second Version
 
-Eidra is an open-source local-first trust layer for AI development. It sits in front of tools like Cursor, Claude Code, SDK workflows, and MCP-connected tools, scans what is about to leave your machine, applies local policy, and can mask, block, or route sensitive traffic before it goes out.
+Eidra is an open-source local-first trust layer for AI development. It sits in front of tools like Cursor, Claude Code, Codex, SDK workflows, and MCP-connected tools, scans what is about to leave your machine, applies local policy, and can mask, block, or route sensitive traffic before it goes out.
 
 ## 2-Minute Version
 

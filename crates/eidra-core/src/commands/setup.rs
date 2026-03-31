@@ -153,7 +153,8 @@ fn build_setup_plan(
             notes: vec![
                 "Cursor works best when it inherits proxy variables from the shell that launched it."
                     .to_string(),
-                "Use `eidra setup --write cursor` to generate a reusable env script.".to_string(),
+                "Use `eidra setup cursor --write` to generate a reusable env script."
+                    .to_string(),
             ],
             artifacts: Vec::new(),
         },
@@ -176,6 +177,33 @@ fn build_setup_plan(
                 "Point MCP clients at {} once the gateway is enabled.",
                 mcp_url
             )],
+            artifacts: Vec::new(),
+        },
+        "codex" => SetupPlan {
+            target: target.to_string(),
+            title: "Eidra setup for Codex CLI".to_string(),
+            steps: vec![
+                format!(
+                    "Run `eidra init` and trust the CA certificate at {}.",
+                    paths.ca_cert_path.display()
+                ),
+                "Start the proxy with `eidra start`.".to_string(),
+                "Launch Codex from a shell that exports the environment variables below."
+                    .to_string(),
+                "If you use MCP with Codex, start the firewall separately with `eidra gateway`."
+                    .to_string(),
+            ],
+            environment: env_map,
+            notes: vec![
+                "Codex works best when it inherits proxy variables from the shell or wrapper that launched it."
+                    .to_string(),
+                format!(
+                    "Point MCP-aware tools at {} once the gateway is enabled.",
+                    mcp_url
+                ),
+                "Use `eidra setup codex --write` to generate a reusable env script."
+                    .to_string(),
+            ],
             artifacts: Vec::new(),
         },
         "openai-sdk" => SetupPlan {
@@ -222,7 +250,7 @@ fn build_setup_plan(
             ],
             environment: HashMap::new(),
             notes: vec![
-                "Use `eidra setup --write github-actions` to generate a reusable snippet."
+                "Use `eidra setup github-actions --write` to generate a reusable snippet."
                     .to_string(),
             ],
             artifacts: Vec::new(),
@@ -370,6 +398,7 @@ fn supported_targets() -> Vec<(&'static str, &'static str)> {
             "claude-code",
             "Claude Code with proxy + optional MCP firewall",
         ),
+        ("codex", "Codex CLI launched from a proxied shell"),
         ("openai-sdk", "OpenAI-compatible SDK traffic through Eidra"),
         (
             "anthropic-sdk",
@@ -385,6 +414,7 @@ fn normalize_target(target: &str) -> String {
         "" => "shell".to_string(),
         "generic" => "shell".to_string(),
         "claude" => "claude-code".to_string(),
+        "codex-cli" => "codex".to_string(),
         "openai" => "openai-sdk".to_string(),
         "anthropic" => "anthropic-sdk".to_string(),
         other => other.to_string(),
@@ -400,6 +430,7 @@ mod tests {
         assert_eq!(normalize_target(""), "shell");
         assert_eq!(normalize_target("generic"), "shell");
         assert_eq!(normalize_target("claude"), "claude-code");
+        assert_eq!(normalize_target("codex-cli"), "codex");
         assert_eq!(normalize_target("openai"), "openai-sdk");
         assert_eq!(normalize_target("anthropic"), "anthropic-sdk");
     }

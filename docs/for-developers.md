@@ -2,7 +2,9 @@
 
 Eidra is a local-first proxy and MCP firewall for AI development workflows.
 
-If you are building with editors, SDKs, agent runtimes, or MCP servers, Eidra gives you a programmable trust boundary in front of those systems.
+If you are building with Cursor, Claude Code, Codex CLI, OpenAI or Anthropic SDK apps, agent runtimes, or MCP servers, Eidra gives you a programmable trust boundary in front of those systems.
+
+Named setup targets are available today for Cursor, Claude Code, Codex CLI, OpenAI-compatible SDKs, Anthropic-compatible SDKs, GitHub Actions, and MCP.
 
 ## What you get
 
@@ -49,6 +51,7 @@ Eidra ships guidance for common environments:
 eidra setup shell
 eidra setup cursor
 eidra setup claude-code
+eidra setup codex
 eidra setup openai-sdk
 eidra setup anthropic-sdk
 eidra setup github-actions

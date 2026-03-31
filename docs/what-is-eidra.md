@@ -2,7 +2,7 @@
 
 Eidra is a local safety layer for AI tools.
 
-It sits between you and tools like Cursor, Claude Code, Copilot, SDK-based apps, or MCP-connected workflows. Before data leaves your machine, Eidra can scan it, mask secrets, block unsafe requests, route sensitive requests to a local model, and show you what happened.
+It sits between you and tools like Cursor, Claude Code, Codex CLI, OpenAI or Anthropic SDK-based apps, GitHub Actions, or MCP-connected workflows. Before data leaves your machine, Eidra can scan it, mask secrets, block unsafe requests, route sensitive requests to a local model, and show you what happened.
 
 ## Why people need it
 
@@ -41,6 +41,7 @@ Eidra lets you see, control, and explain what your AI stack is sending out of yo
 ### If you are just starting with AI tools
 
 Eidra gives you a safer default without forcing you to change your whole workflow.
+If you already use Cursor, Claude Code, or Codex, the quickest path is usually one `eidra setup <target>` command plus proxy environment variables.
 
 ### If you are building AI workflows
 
@@ -76,9 +77,11 @@ With Eidra, sensitive OpenAI-compatible chat requests can be routed to a local O
 curl -sf eidra.dev/install | sh
 eidra init
 eidra doctor
-eidra setup cursor
+eidra setup codex
 eidra dashboard
 ```
+
+If you use Cursor or Claude Code instead, swap `codex` for `cursor` or `claude-code`.
 
 If you only want to test the scanner first:
 
