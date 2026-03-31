@@ -1,5 +1,3 @@
-[English](README.md) | [日本語](docs/README.ja.md) | [简体中文](docs/README.zh.md) | [한국어](docs/README.ko.md) | [Español](docs/README.es.md) | [Português](docs/README.pt.md) | [Français](docs/README.fr.md) | [Deutsch](docs/README.de.md) | [Русский](docs/README.ru.md) | [हिन्दी](docs/README.hi.md)
-
 <p align="center">
   <h1 align="center">Eidra</h1>
   <p align="center"><strong>See exactly what your AI tools are leaking. Then stop it.</strong></p>
@@ -9,16 +7,17 @@
     <a href="https://github.com/hanabi-jpn/eidra/stargazers"><img src="https://img.shields.io/github/stars/hanabi-jpn/eidra?style=social" alt="GitHub Stars"></a>
   </p>
   <p align="center">
-    <a href="README.md">English</a> ·
-    <a href="docs/README.ja.md">日本語</a> ·
-    <a href="docs/README.zh.md">简体中文</a> ·
-    <a href="docs/README.ko.md">한국어</a> ·
-    <a href="docs/README.es.md">Español</a> ·
-    <a href="docs/README.pt.md">Português</a> ·
-    <a href="docs/README.fr.md">Français</a> ·
-    <a href="docs/README.de.md">Deutsch</a> ·
-    <a href="docs/README.ru.md">Русский</a> ·
-    <a href="docs/README.hi.md">हिन्दी</a>
+    <a href="README.md"><kbd><strong>English</strong></kbd></a>
+    <a href="docs/README.ja.md"><kbd>日本語</kbd></a>
+    <a href="docs/README.zh.md"><kbd>简体中文</kbd></a>
+    <a href="docs/README.ko.md"><kbd>한국어</kbd></a>
+    <a href="docs/README.es.md"><kbd>Español</kbd></a>
+    <br>
+    <a href="docs/README.pt.md"><kbd>Português</kbd></a>
+    <a href="docs/README.fr.md"><kbd>Français</kbd></a>
+    <a href="docs/README.de.md"><kbd>Deutsch</kbd></a>
+    <a href="docs/README.ru.md"><kbd>Русский</kbd></a>
+    <a href="docs/README.hi.md"><kbd>हिन्दी</kbd></a>
   </p>
 </p>
 

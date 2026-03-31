@@ -1,5 +1,3 @@
-[English](../README.md) | [日本語](README.ja.md) | [简体中文](README.zh.md) | [한국어](README.ko.md) | [Español](README.es.md) | [Português](README.pt.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Русский](README.ru.md) | [हिन्दी](README.hi.md)
-
 <p align="center">
   <h1 align="center">Eidra</h1>
   <p align="center"><strong>AI 도구가 무엇을 밖으로 유출하는지 정확히 보고, 바로 막으세요.</strong></p>
@@ -9,16 +7,17 @@
     <a href="https://github.com/hanabi-jpn/eidra/stargazers"><img src="https://img.shields.io/github/stars/hanabi-jpn/eidra?style=social" alt="GitHub Stars"></a>
   </p>
   <p align="center">
-    <a href="../README.md">English</a> ·
-    <a href="README.ja.md">日本語</a> ·
-    <a href="README.zh.md">简体中文</a> ·
-    <a href="README.ko.md">한국어</a> ·
-    <a href="README.es.md">Español</a> ·
-    <a href="README.pt.md">Português</a> ·
-    <a href="README.fr.md">Français</a> ·
-    <a href="README.de.md">Deutsch</a> ·
-    <a href="README.ru.md">Русский</a> ·
-    <a href="README.hi.md">हिन्दी</a>
+    <a href="../README.md"><kbd>English</kbd></a>
+    <a href="README.ja.md"><kbd>日本語</kbd></a>
+    <a href="README.zh.md"><kbd>简体中文</kbd></a>
+    <a href="README.ko.md"><kbd><strong>한국어</strong></kbd></a>
+    <a href="README.es.md"><kbd>Español</kbd></a>
+    <br>
+    <a href="README.pt.md"><kbd>Português</kbd></a>
+    <a href="README.fr.md"><kbd>Français</kbd></a>
+    <a href="README.de.md"><kbd>Deutsch</kbd></a>
+    <a href="README.ru.md"><kbd>Русский</kbd></a>
+    <a href="README.hi.md"><kbd>हिन्दी</kbd></a>
   </p>
 </p>
 
