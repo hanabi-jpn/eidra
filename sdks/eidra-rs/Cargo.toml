@@ -1,0 +1,12 @@
+[package]
+name = "eidra-rs"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Eidra SDK for Rust — re-exports core crates for easy integration"
+
+[dependencies]
+eidra-scan = { path = "../../crates/eidra-scan" }
+eidra-policy = { path = "../../crates/eidra-policy" }
+eidra-transport = { path = "../../crates/eidra-transport" }
+eidra-identity = { path = "../../crates/eidra-identity" }

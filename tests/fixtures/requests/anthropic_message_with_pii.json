@@ -1,0 +1,9 @@
+{
+  "model": "claude-sonnet-4-20250514",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Send email to john.doe@acme.com, phone +15551234567, SSN 123-45-6789"
+    }
+  ]
+}

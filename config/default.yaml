@@ -1,0 +1,44 @@
+version: "1"
+proxy:
+  listen: "127.0.0.1:8080"
+  max_body_size: 10485760  # 10MB
+
+scan:
+  enabled: true
+  custom_rules_path: ""
+
+local_llm:
+  enabled: false
+  provider: ollama
+  endpoint: "http://localhost:11434"
+  model_mapping:
+    default: "qwen2.5:latest"
+
+mcp_gateway:
+  enabled: false
+  listen: "127.0.0.1:8081"
+  # Default semantic RBAC rules (uncomment and customize per server):
+  # server_whitelist:
+  #   my_server:
+  #     name: "my_server"
+  #     endpoint: "http://localhost:9000"
+  #     tool_rules:
+  #       - tool: "execute_sql"
+  #         block_patterns: ["(?i)\\b(DROP|DELETE|TRUNCATE|ALTER|INSERT|UPDATE)\\b"]
+  #         description: "Block mutating SQL (read-only by default)"
+  #       - tool: "read_file"
+  #         blocked_paths: ["~/.ssh/**", "~/.aws/**", "~/.gnupg/**", "**/.env", "**/.env.*", "/etc/shadow", "/etc/passwd"]
+  #         description: "Block access to sensitive files"
+  #       - tool: "write_file"
+  #         blocked_paths: ["~/.ssh/**", "~/.aws/**", "**/.env", "/etc/**", "/usr/**"]
+  #         description: "Block writes to system and credential files"
+  #       - tool: "run_command"
+  #         block_patterns: ["rm\\s+(-rf?|--recursive)", "curl.*\\|\\s*(sh|bash)", "wget.*\\|\\s*(sh|bash)", "chmod\\s+777", ":(){ :|:& };:", "mkfs\\.", "dd\\s+if="]
+  #         description: "Block destructive shell commands"
+  #       - tool: "*"
+  #         block_patterns: ["(?i)(password|secret|token|api.?key)\\s*[:=]\\s*['\"]?[A-Za-z0-9]{8,}"]
+  #         description: "Block secrets in any tool arguments"
+
+audit:
+  enabled: true
+  db_path: "~/.eidra/audit.db"

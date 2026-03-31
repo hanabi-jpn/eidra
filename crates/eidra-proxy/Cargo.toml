@@ -1,0 +1,27 @@
+[package]
+name = "eidra-proxy"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+tokio = { workspace = true }
+hyper = { workspace = true }
+hyper-util = { workspace = true }
+http-body-util = { workspace = true }
+rustls = { workspace = true }
+tokio-rustls = { workspace = true }
+rcgen = { workspace = true }
+rustls-native-certs = "0.8"
+hyper-rustls = { version = "0.27", features = ["http1", "tls12", "ring"] }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+thiserror = { workspace = true }
+chrono = { workspace = true }
+uuid = { workspace = true }
+
+eidra-scan = { path = "../eidra-scan" }
+eidra-audit = { path = "../eidra-audit" }
+eidra-policy = { path = "../eidra-policy" }
+eidra-router = { path = "../eidra-router" }

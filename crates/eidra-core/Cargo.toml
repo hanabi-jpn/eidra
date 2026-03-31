@@ -1,0 +1,35 @@
+[package]
+name = "eidra-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "eidra"
+path = "src/main.rs"
+
+[dependencies]
+tokio = { workspace = true }
+clap = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+anyhow = { workspace = true }
+serde = { workspace = true }
+serde_yaml = { workspace = true }
+serde_json = { workspace = true }
+rcgen = { workspace = true }
+time = "0.3"
+
+eidra-proxy = { path = "../eidra-proxy" }
+eidra-scan = { path = "../eidra-scan" }
+eidra-audit = { path = "../eidra-audit" }
+eidra-policy = { path = "../eidra-policy" }
+eidra-router = { path = "../eidra-router" }
+eidra-mcp = { path = "../eidra-mcp" }
+eidra-tui = { path = "../eidra-tui" }
+crossterm = { workspace = true }
+ratatui = { workspace = true }
+libc = "0.2"
+x25519-dalek = { workspace = true }
+sha2 = { workspace = true }
+eidra-transport = { path = "../eidra-transport" }

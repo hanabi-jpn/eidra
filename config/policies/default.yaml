@@ -1,0 +1,47 @@
+version: "1"
+default_action: allow
+metadata:
+  profile: "safe_defaults"
+
+rules:
+  - name: block_private_keys
+    description: "Private keys must never leave the device."
+    match:
+      category: private_key
+    action: block
+
+  - name: mask_cloud_sensitive_data
+    description: "Mask secrets and internal-only data before sending to cloud providers."
+    match:
+      category:
+        - api_key
+        - token
+        - credential
+        - secret_key
+        - internal_infra
+        - sensitive_path
+        - high_entropy
+      destination: cloud
+    action: mask
+
+  - name: mask_pii_cloud
+    description: "Mask PII before sending to cloud providers."
+    match:
+      category: pii
+      destination: cloud
+    action: mask
+
+  - name: allow_local_sensitive_data
+    description: "Allow sensitive data to stay local when the destination is local."
+    match:
+      category:
+        - api_key
+        - token
+        - credential
+        - secret_key
+        - pii
+        - internal_infra
+        - sensitive_path
+        - high_entropy
+      destination: local
+    action: allow
